@@ -1,0 +1,14 @@
+{%extends "layout.html"%}
+{%block title%}
+about page
+{%endblock title%}
+
+{%block content%}
+our about page consists of all of these with no exclusion.
+{%for post in posts%}
+my name is {{post.author}} and I have written the book having the following {{post.content}} and with the description
+below
+{{post.description}}
+{%endfor%}
+
+{%endblock content%}

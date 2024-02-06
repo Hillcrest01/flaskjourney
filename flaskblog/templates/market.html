@@ -1,0 +1,38 @@
+{%extends 'layout.html'%}
+
+{%block title%}
+market page
+{%endblock title%}
+
+
+{%block content%}
+<h1 style="color: white; margin-bottom: 100px; text-align: center;">
+    Here are the goods that are available at the moment
+</h1>
+<table style="background-color: rgb(26, 25, 25); width: 1000px; margin-left: 400px; color: white; height: 200px;">
+    <tr style="text-align: center;">
+        <th>Item ID</th>
+        <th>Item Name</th>
+        <th>Item Price</th>
+        <th>Options</th>
+    </tr>
+    {%for item in items%}
+    <tr style="background-color: rgb(28, 29, 29); text-align: center;">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}$</td>
+        <td>{{item.description}}</td>
+        <td>
+            <button style="border-radius: 4px; background-color: rgb(10, 191, 247); border: none;">
+                <a href="#" style="color: white; text-decoration: none;">
+                    More Options
+                </a>
+            </button>
+            <button style="border-radius: 4px; background-color: rgb(42, 240, 42); border: none;">
+                <a href="#" style="color: white; text-decoration: none;">Purchase This Item</a>
+            </button>
+        </td>
+    </tr>
+    {%endfor%}
+</table>
+{%endblock content%}

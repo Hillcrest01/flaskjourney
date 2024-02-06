@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>
+        {%block title%}
+
+        {%endblock title%}
+    </title>
+</head>
+
+<body class="body" style="background-color: #212121; color: white;">
+    <div class="head">
+        <span class="fargo">
+            <a href="{{ url_for('home_page')}}">
+                Flask Blog
+            </a>
+        </span>
+        <ul class="list">
+            <li><a href="{{ url_for ('home_page') }}">Home</a></li>
+            <li><a href="{{ url_for('about_page')}}">About</a></li>
+            <li><a href="{{url_for('market_page')}}">market</a></li>
+        </ul>
+
+        <ul class="list">
+            <li><a href="#">log in</a></li>
+            <li><a href="#">register</a></li>
+        </ul>
+    </div>
+    <hr>
+    <style>
+        .head {
+            background-color: rgb(13, 21, 22);
+            height: 50px;
+            /*overflow hidden is used to ensure that when scrolling the navigation bar will remain sticked and will not be scrolled together with the content of the webpage or the application. */
+            overflow: hidden;
+            position: sticky;
+
+        }
+
+        .fargo {
+            color: white;
+            font-weight: bold;
+            padding: 18px;
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-right: 800px;
+            text-align: center;
+        }
+
+        .fargo a {
+            color: white;
+        }
+
+        .fargo a:hover {
+            text-decoration: none;
+        }
+
+        .list {
+            display: inline-block;
+            padding: 20px;
+            margin-left: 10px;
+        }
+
+        .list li {
+            display: inline;
+            color: white;
+            margin: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .list li a {
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .list li a:hover {
+            text-decoration: underline;
+        }
+
+        .finish {
+            background-color: rgb(13, 21, 22);
+            height: 50px;
+            /*overflow hidden is used to ensure that when scrolling the navigation bar will remain sticked and will not be scrolled together with the content of the webpage or the application. */
+            overflow: hidden;
+            position: sticky;
+            margin-top: 850px;
+            text-align: center;
+        }
+
+        .footage {
+            display: inline-block;
+            padding: 20px;
+            margin-left: 10px;
+        }
+
+        .footage li {
+            display: inline;
+            color: white;
+            margin: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .footage li a {
+            padding: 10px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .footage li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    {%block image%}
+
+    {%endblock image%}
+    {%block content%}
+
+
+
+    {%endblock content%}
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+    <footer>
+        <div class="finish">
+            <ul class="footage">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">More Info.</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+
+</html>
